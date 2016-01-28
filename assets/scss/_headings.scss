@@ -1,0 +1,50 @@
+.header {
+    padding: 5em 2em 6em 2em;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header--pink {
+    background-color: $pink;
+}
+
+    .h1 {
+        font-family: $bold-heading;
+        font-size: 9.2em;
+        text-align: center;
+    }
+
+    .h1--white {
+        color: #FFF;
+    }
+
+
+    .h2 {
+        font-family: $bold-heading;
+        font-size: 5.2em;
+        text-align: center;
+    }
+
+    .h2--gray {
+        color: $dark-gray;
+    }
+
+    .h2--margin-bottom-big {
+        margin-bottom: .75em;
+    }
+    
+    .h2--margin-bottom-small {
+        margin-bottom: .25em;
+    }
+
+
+    .h3 {
+        font-family: $bold-heading;
+        font-size: 3.6em;
+        text-align: center;
+        margin-bottom: .25em;
+    }
+
+    .h3--gray {
+        color: $dark-gray;
+    }

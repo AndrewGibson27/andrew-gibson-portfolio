@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Resume | Andrew Gibson | Interactive developer and journalist</title>
+        
+        <script src="js/modernizr.js"></script>
+        <script>
+            if (!Modernizr.svg) {
+                window.location.href = "http://browsehappy.com/";
+            }
+        </script>
+        
+        <link rel="stylesheet" type="text/css" href="css/libs.css">
+        <link rel="stylesheet" type="text/css" href="css/resume.css">
+        
+        <script src="js/modernizr.js"></script>
+        <script src="js/libs-top.js"></script>
+    </head>
+    <body>
+        <nav class="nav nav--white-stripe">
+            <span class="nav__hamburger" id="js__hamburger"></span>
+            
+            <ul class="nav__links">
+                <li class="nav__link">
+                    <a href="./work.html">Work</a>
+                </li>
+            
+                <li class="nav__link nav__link--right-margin nav__link--current">
+                    <a href="./resume.html">Resume</a>
+                </li>
+            
+                <li class="nav__logo"></li>
+            
+                <li class="nav__link nav__link--left-margin">
+                    <a href="./about.html">About</a>
+                </li>
+            
+                <li class="nav__link">
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <script>
+            Snap.load("./svg/logo.svg", function(f){
+                var group = f.selectAll('g');
+            
+                (function circleAnimation(){
+                    group.animate(
+                        { transform: 'r360,25,25' },
+                    
+                        2500,
+                    
+                        mina.elastic,
+                    
+                        function(){ 
+                            group.attr({ transform: 'rotate(0 25 25)' });
+                        
+                            setTimeout(function(){
+                                circleAnimation();
+                            }, 30000);
+                        }
+                    );
+                })();
+            
+                Snap.select('.nav__logo').append(f);
+            
+                $('.nav__logo svg').wrap('<a class="logo__link" href="./index.html"></a>');
+            });
+        </script>
+        
+        <div class="master-container fade-el fade-el--faded-out fade-el--accelerated">
+            <header class="header header--pink">
+                <h1 class="h1 h1--white">Resume</h1>
+                
+                <div class="triangle triangle--big triangle--gray"></div>
+                <div class="triangle triangle--small triangle--white"></div>
+            </header>
+            
+            <section class="container container--white container--800">
+                <h2 class="h2 h2--gray h2--margin-bottom-big">Experience</h2>
+            
+                <div class="block block--full block--padded">
+                    <h3 class="h3 h3--gray">Orlando Sentinel</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Multimedia artist, May 2014 to present.</span>
+                        This consists of developing full-stack web applications, designing special presentations for digital projects and building news apps.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        My accomplishments include building a from-scratch election tool and developing important pieces of our responsive website that launched in 2014.
+                        My web design helped propel the Sentinel to a <a target="_blank" href="http://fsne.org/news/2015/07/20/2015-fsne-journalism-contest-results/" class="text-link text-link--gray text-link--light text-link--small">first-place finish</a> in the multimedia category of the 2015 Florida Society of News Editors contest.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Digital intern, May 2013 to August 2013.</span>
+                        I built photo galleries, produced interactive projects and shot and edited video. 
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800">
+                <div class="block block--full block--padded">
+                    <h3 class="h3 h3--gray">KBIA-FM</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Digital graphics producer, January 2014 to May 2014.</span>
+                        I built interactive graphics to accompany stories produced by this Columbia, Mo., NPR affiliate.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Freelancer, February 2012 to April 2012.</span>
+                        A coworker and I contributed a story about projected increases in archaeology jobs.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800">
+                <div class="block block--full block--padded">
+                    <h3 class="h3 h3--gray">Columbia Missourian</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Web analytics analyst, January 2014 to May 2014.</span>
+                        I revamped the way this Columbia, Mo., news organization delivers and draws conclusions from analytics reports.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Community outreach team member, August 2013 to December 2013.</span>
+                        Work on this team consisted of analyzing web analytics, managing social-media platforms and finding new ways to spark conversation with audience members.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800">
+                <div class="block block--full block--padded">
+                    <h3 class="h3 h3--gray">SWIFT</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Digital communications intern, January 2013 to April 2013.</span>
+                        My work for this Brussels-based financial company (Society for Worldwide Interbank Financial Telecommunication) consisted of finding better ways to use social media, writing articles for the web and designing presentations.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800">
+                <div class="block block--full block--padded">
+                    <h3 class="h3 h3--gray">Newsy</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Video producer, August 2012 to December 2012.</span>
+                        I wrote scripts and edited videos with Final Cut Pro X for this Columbia, Mo.-based <a target="_blank" href="http://www.newsy.com/" class="text-link text-link--gray text-link--light text-link--small">video startup</a>.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800">
+                <div class="block block--full block--padded">
+                    <h3 class="h3 h3--gray">KOMU-TV</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Sports online producer, August 2012 to December 2012.</span>
+                        I helped manage the sports section of the website of this Columbia, Mo., NBC affiliate.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Freelancer, February 2012 to April 2012.</span>
+                        A coworker and I contributed two stories to KOMU: one about a semi-pro football team, another about a man who has clever ways to save on energy bills.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800">
+                <div class="block block--full block--padded">
+                    <h3 class="h3 h3--gray">The Colorado Springs Gazette</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Business-reporting intern, May 2012 to August 2012.</span>
+                        I wrote stories for the business section and also helped cover Colorado's then-most destructive wildfire of all time.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800">
+                <div class="block block--full block--padded">
+                    <h3 class="h3 h3--gray">KCNC-TV</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">News intern, May 2011 to August 2011.</span>
+                        At this NBC affiliate in Denver, I wrote for the web, produced a resume tape and answered news tips.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--gray container--1280">
+                <h2 class="h2 h2--gray h2--margin-bottom-big">Coding</h2>
+            
+                <div class="block block--two-thirds block--padded block--border">
+                    <h3 class="h3 h3--gray">My specialties</h3>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">JavaScript.</span>
+                        And I dont just mean <code>document.getElementById('foo')</code>.
+                        I'm talking about closures, AJAX, event delegation, ES6 and code bundling.
+                        I can also build applications with Node.js, including <a target="_blank" href="https://www.smashingmagazine.com/2015/04/react-to-the-future-with-isomorphic-apps/" class="text-link text-link--gray text-link--light text-link--small">isomorphic</a> ones.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">CSS.</span>
+                        I write CSS3 that follows <a target="_blank" href="http://getbem.com/introduction/" class="text-link text-link--gray text-link--light text-link--small">BEM principles</a>. 
+                        I also know how to use the Sass and LESS preprocessors.
+                        Because I often develop with React.js, <a target="_blank" href="http://glenmaddern.com/articles/css-modules" class="text-link text-link--gray text-link--light text-link--small">CSS modules</a> are in my toolkit, too. 
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">PHP.</span>
+                        Including how to write it for database applications.
+                    </p>
+                </div>
+                
+                <div class="block block--third block--third-last block--padded">
+                    <h3 class="h3 h3--gray">Others</h3>
+                
+                    <ul class="list">
+                        <li>HTML5</li>
+                        <li>MySQL</li>
+                        <li>Some Python</li>
+                        <li>Some Ruby</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--white container--1280">
+                <div class="block block--half block--border block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">CLI tools</h2>
+                    
+                    <ul class="list list--floated">
+                        <li><a target="_blank" href="https://git-scm.com/" class="text-link text-link--gray text-link--light text-link--small">Git</a></li>
+                        <li><a target="_blank" href="https://www.npmjs.com/" class="text-link text-link--gray text-link--light text-link--small">NPM</a></li>
+                        <li><a target="_blank" href="http://bower.io/" class="text-link text-link--gray text-link--light text-link--small">Bower</a></li>
+                        <li><a target="_blank" href="https://webpack.github.io/" class="text-link text-link--gray text-link--light text-link--small">Webpack</a></li>
+                    </ul>
+                    
+                    <ul class="list list--floated">
+                        <li><a target="_blank" href="http://browserify.org/" class="text-link text-link--gray text-link--light text-link--small">Browserify</a></li>
+                        <li><a target="_blank" href="http://gruntjs.com/" class="text-link text-link--gray text-link--light text-link--small">Grunt</a></li>
+                        <li><a target="_blank" href="http://gulpjs.com/" class="text-link text-link--gray text-link--light text-link--small">Gulp</a></li>
+                    </ul>
+                </div>
+                
+                <div class="block block--half block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">Libraries</h2>
+                    
+                    <ul class="list list--floated">
+                        <li><a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a></li>
+                        <li><a target="_blank" href="https://github.com/rackt/react-router" class="text-link text-link--gray text-link--light text-link--small">React Router</a></li>
+                        <li><a target="_blank" href="https://angularjs.org/" class="text-link text-link--gray text-link--light text-link--small">Angular 1.x</a></li>
+                        <li><a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a></li>
+                        <li><a target="_blank" href="https://jquery.com/" class="text-link text-link--gray text-link--light text-link--small">jQuery</a></li>
+                    </ul>
+                    
+                    <ul class="list list--floated">
+                        <li><a target="_blank" href="https://modernizr.com/" class="text-link text-link--gray text-link--light text-link--small">Modernizr</a></li>
+                        <li><a target="_blank" href="https://www.datatables.net/" class="text-link text-link--gray text-link--light text-link--small">DataTables</a></li>
+                        <li><a target="_blank" href="http://requirejs.org/" class="text-link text-link--gray text-link--light text-link--small">RequireJS</a></li>
+                        <li><a target="_blank" href="https://github.com/jsoma/tabletop" class="text-link text-link--gray text-link--light text-link--small">Tabletop</a></li>
+                        <li><a target="_blank" href="http://d3js.org/" class="text-link text-link--gray text-link--light text-link--small">D3 (a bit)</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--gray container--1280">
+                <div class="block block--half block--border block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">Templates</h2>
+                    
+                    <ul class="list list--floated">
+                        <li><a target="_blank" href="http://handlebarsjs.com/" class="text-link text-link--gray text-link--light text-link--small">Handlebars</a></li>
+                        <li><a target="_blank" href="http://jade-lang.com/" class="text-link text-link--gray text-link--light text-link--small">Jade</a></li>
+                    </ul>
+                    
+                    <ul class="list list--floated">
+                        <li><a target="_blank" href="http://liquidmarkup.org/" class="text-link text-link--gray text-link--light text-link--small">Liquid</a></li>
+                        <li><a target="_blank" href="http://ruby-doc.org/stdlib-2.3.0/libdoc/erb/rdoc/ERB.html" class="text-link text-link--gray text-link--light text-link--small">ERB</a></li>
+                    </ul>
+                </div>
+                
+                <div class="block block--half block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">Static sites</h2>
+                    
+                    <ul class="list">
+                        <li><a target="_blank" href="https://jekyllrb.com/" class="text-link text-link--gray text-link--light text-link--small">Jekyll</a></li>
+                        <li><a target="_blank" href="https://middlemanapp.com/" class="text-link text-link--gray text-link--light text-link--small">Middleman</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--white container--1280">
+                <div class="block block--half block--border block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">Data formats</h2>
+                    
+                    <ul class="list list--floated">
+                        <li>JSON</li>
+                        <li>XML</li>
+                    </ul>
+                    
+                    <ul class="list list--floated">
+                        <li>YAML</li>
+                        <li>CSV</li>
+                    </ul>
+                </div>
+                
+                <div class="block block--half block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">Software</h2>
+                    
+                    <ul class="list list--floated">
+                        <li>Illustrator</li>
+                        <li>InDesign</li>
+                    </ul>
+                    
+                    <ul class="list list--floated">
+                        <li>Photoshop</li>
+                        <li>Final Cut Pro X</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--gray container--800">
+                <div class="block block--full block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">Education</h2>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">Bachelor in Journalism, University of Missouri.</span>
+                        I graduated in May 2014 as the valedictorian of the journalism school. This included summa cum laude honors.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800">
+                <div class="block block--full block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">Awards</h2>
+                    
+                    <p class="text text--gray">
+                        <span class="text--bold text--big">First place in multimedia category, Florida Society of News Editors contest, 2015.</span>
+                        I did the web design for the Orlando Sentinel's <a target="_blank" href="http://interactive.orlandosentinel.com/mental-illness/index.html" class="text-link text-link--gray text-link--light text-link--small">extensive look</a> into mental illness in Central Florida. The project went on to take <a target="_blank" href="http://fsne.org/news/2015/07/20/2015-fsne-journalism-contest-results/" class="text-link text-link--gray text-link--light text-link--small">first prize</a>.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--gray container--800">
+                <div class="block block--full block--padded">
+                    <h2 class="h2 h2--gray h2--margin-bottom-small">Speaking</h2>
+                    
+                    <p class="text text--gray">
+                        I have spoken at the following events/locations:
+                    </p>
+                    
+                    <ul class="list list--margin-top">
+                        <li><a target="_blank" href="http://www.newsxchange.org/home.html" class="text-link text-link--gray text-link--light text-link--small">News Xchange</a></li>
+                        <li><a target="_blank" href="http://knightfoundation.org/funding-initiatives/knight-prototype-fund/" class="text-link text-link--gray text-link--light text-link--small">Knight Prototype fund</a> demo day</li>
+                        <li><a target="_blank" href="http://studentpress.journ.umn.edu/nspa/" class="text-link text-link--gray text-link--light text-link--small">National Scholastic Press Association Convention</a></li>
+                        <li><a target="_blank" href="http://valenciacollege.edu/" class="text-link text-link--gray text-link--light text-link--small">Valencia College</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <footer class="footer">
+                <ul class="footer__social">
+                    <li>
+                        <a target="_blank" href="https://github.com/AndrewGibson27">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/andrewtgibson/">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                         </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/andrewgibson27">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                
+                <p class="footer__link">
+                    Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>, <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+                </p>
+                
+                <p class="footer__link">
+                    Like my website? <a href="https://github.com/AndrewGibson27/andrew-gibson-portfolio">Get the code</a>
+                </p>
+            </footer>
+            
+            <aside class="panel__outer">
+                <div class="panel panel--independent panel--pink panel--hidden">
+                    <span class="panel__close">&times;</span>
+                    <p>Want a PDF version? <span class="own-line"><a target="_blank" class="panel-link" href="https://drive.google.com/file/d/0B7JvT7spAZeER0JPc2Zpb2NtXzQ/view?usp=sharing">You can get one here.</a></span></p>
+                </div>
+            </aside>
+        </div>
+    </body>
+    <script src="js/libs-bottom.js"></script>
+    <script src="js/bundle.js"></script>
+</html>

@@ -1,0 +1,99 @@
+@mixin retina-bg($list, $ext: '@2x', $type: '.jpg') {
+    @each $set in $list {
+        $bp: map-get($set, bp);
+        $name: unquote(map-get($set, name));
+        $retina-ending: unquote($ext + $type);
+        $normal-ending: unquote($type);
+        
+        @media ($bp) {
+            background-image: url(../images/#{$name}#{$normal-ending});
+        }
+        
+        @media 
+            ($bp) and (min--moz-device-pixel-ratio: 1.3),
+            ($bp) and (-o-min-device-pixel-ratio: 2.6/2),
+            ($bp) and (-webkit-min-device-pixel-ratio: 1.3),
+            ($bp) and (min-device-pixel-ratio: 1.3),
+            ($bp) and (min-resolution: 1.3dppx) {
+                background-image: url(../images/#{$name}#{$retina-ending});
+            }   
+    }
+}
+
+@mixin bp($point) {
+    @if $point == first-header-shrink {
+        @media (max-width: 1023px) { @content ; }
+    }
+    @else if $point == no-triangle {
+        @media (max-width: 800px) { @content ; }
+    }
+    @else if $point == stack {
+        @media (max-width: 767px) { @content ; }
+    }
+    @else if $point == second-header-shrink {
+        @media (max-width: 568px) { @content ; }
+    } 
+}
+
+@mixin clearfix {
+  	&:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+  	}
+}
+
+@mixin calc($vals, $property: width) {
+	#{$property}: -webkit-calc(#{$vals});
+	#{$property}: -moz-calc(#{$vals});
+	#{$property}: -ms-calc(#{$vals});
+	#{$property}: -o-calc(#{$vals});
+	#{$property}: calc(#{$vals});
+}
+
+@mixin animation($list) {
+    $webkit: '';
+    $moz: '';
+    $o: '';
+    $normal: '';
+
+    @for $i from 1 through length($list) {
+        $anim: nth($list, $i);
+
+        @if $i == length($list) {
+            $webkit: unquote($webkit + $anim);
+            $moz: unquote($moz + $anim);
+            $o: unquote($o + $anim);
+            $normal: unquote($normal + $anim);
+        }
+        @else {
+            $webkit: unquote($webkit + $anim + ',');
+            $moz: unquote($moz + $anim + ',');
+            $o: unquote($o + $anim + ',');
+            $normal: unquote($normal + $anim + ',');
+        }
+    }
+
+    -webkit-animation: unquote($webkit);
+    -moz-animation: unquote($moz);
+    -o-animation: unquote($o);
+    animation: unquote($normal);      
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}

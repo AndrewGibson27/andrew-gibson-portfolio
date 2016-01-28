@@ -1,0 +1,17 @@
+.fade-el {
+    transition: opacity .4s ease-in-out;
+    
+    &--faded-out {
+        opacity: 0;
+    }
+    
+    &--accelerated {
+        .modernizr--willchange & {
+            will-change: opacity;
+        }
+    
+        .modernizr--no-willchange & {
+            transform: translate3d(0,0,0);
+        }
+    }
+}

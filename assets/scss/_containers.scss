@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    @include clearfix;
+    
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.container--min-height {
+    min-height: 300px;
+}
+
+.container--1440 {
+    max-width: 1440px;
+}
+
+.container--1280 {
+    max-width: 1280px;
+}
+
+.container--600 {
+    max-width: 600px;
+}
+
+.container--800 {
+    max-width: 800px;
+}
+
+.container--white {
+    background-color: #FFF;
+}
+
+.container--gray {
+    background-color: $very-light-gray;
+    border: 1px solid $light-gray;
+}
+
+.container--rounded {
+    border-radius: 3px;
+}
+
+.container--independent {
+    font-size: 10px;
+    
+    @include bp(stack) {
+        font-size: 8px;
+    }
+}

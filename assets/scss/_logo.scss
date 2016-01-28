@@ -1,0 +1,17 @@
+.logo__link {
+    display: block;
+    width: 70px;
+    height: 50px;
+    color: transparent;
+    text-decoration: none;
+    transition: .3s opacity;
+    
+    &:active, &:hover {
+        opacity: .8;
+    }
+}
+
+    .logo__svg {
+        display: block;
+        height: 70px;
+    }

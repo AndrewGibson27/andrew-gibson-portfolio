@@ -1,0 +1,50 @@
+.footer {
+    background: #DCDCDC;
+    clear: both;
+    margin-top: 50px;
+    padding: 20px;
+}
+    
+    .footer__social {
+        display: block;
+        list-style: none;
+        text-align: center;
+        
+        li {
+            display: inline-block;
+            
+            a {
+                color: transparent;
+                text-decoration: none;
+                
+                svg {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    transition: opacity .3s;
+                }
+                
+                &:hover svg, &:active svg {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+    
+    .footer__link {
+        margin-top: 20px;
+        font-size: 14px;
+        color: $dark-gray;
+        font-family: $regular-body;
+        text-align: center;
+        line-height: 140%;
+        
+        a {
+            color: inherit;
+            text-decoration: underline;
+            
+            &:hover, &:active {
+                color: lighten($dark-gray, 30%);
+            }
+        }
+    }

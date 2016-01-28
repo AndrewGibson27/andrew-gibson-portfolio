@@ -1,0 +1,146 @@
+@import 'logo';
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    opacity: .95;
+    z-index: 2;
+    
+    &--white-stripe {
+        border-bottom-color: #FFF;
+    }
+    
+    &--pink-stripe {
+        border-bottom-color: $pink;
+    }
+}
+
+    .nav__hamburger {
+        position: absolute;
+        display: block;
+        width: 51px;
+        height: 50px;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #FFF;
+        cursor: pointer;
+        display: none;
+        
+        &:before {
+            content: '\f0c9';
+            position: absolute;
+            font-size: 36px;
+            font-family: FontAwesome;
+            width: 100%;
+            height: 100%;
+            left: 10px;
+            top: 8px;
+            bottom: 10px;
+            
+            .nav--sidebar-showing & {
+                content: "\f00d";
+            }
+        }
+        
+        &:hover, &:active {
+            color: $pink;
+        }
+        
+        @include bp(stack) {
+            display: block;
+        }
+    }
+
+    .nav__links {
+        list-style: none;
+        text-align: center;
+        height: 50px;
+        
+        @include bp(stack) {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            height: auto;
+            width: 200px;
+        }
+    }
+    
+        .nav__link {
+            display: inline-block;
+            height: 50px;
+            width: 150px;
+            
+            a {
+                display: block;
+                height: 100%;
+                line-height: 50px;
+                color: #FFF;
+                text-align: center;
+                text-decoration: none;
+                font-family: $bold-heading;
+                font-size: 20px;
+                text-transform: uppercase;
+                transition: .3 background-color;
+                
+                &:hover, &:active {
+                    color: $pink;
+                }
+            }
+            
+            &--current {
+                a {
+                    color: $pink;
+                }
+            }
+            
+            @include bp(stack) {
+                background-color: #333;
+                width: 100%;
+                border-top: 1px solid #666;
+                display: none;
+                
+                .nav--sidebar-showing & {
+                    display: block;
+                }
+            }
+        }
+        
+        .nav__link--right-margin {
+            margin-right: 50px;
+            
+            @include bp(stack) {
+                margin-right: 0;
+            }
+        }
+        
+        .nav__link--left-margin {
+            margin-left: 50px;
+            
+            @include bp(stack) {
+                margin-left: 0;
+            }
+        }
+        
+        .nav__logo {
+            width: 70px;
+            height: 70px;
+            position: fixed;
+            top: 2%;
+            left: 50%;
+            margin-left: -35px;
+            
+            @include bp(stack) {
+                display: block;
+                
+                .nav--sidebar-showing & {
+                    display: none;
+                }
+            }
+        }

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My work | Andrew Gibson | Interactive developer and journalist</title>
+        
+        <script src="js/modernizr.js"></script>
+        <script>
+            if (!Modernizr.svg) {
+                window.location.href = "http://browsehappy.com/";
+            }
+        </script>
+        
+        <link rel="stylesheet" type="text/css" href="css/libs.css">
+        <link rel="stylesheet" type="text/css" href="css/work.css">
+        
+        <script src="js/modernizr.js"></script>
+        <script src="js/libs-top.js"></script>
+    </head>
+    <body>
+        <nav class="nav nav--white-stripe">
+            <span class="nav__hamburger" id="js__hamburger"></span>
+            
+            <ul class="nav__links">
+                <li class="nav__link nav__link--current">
+                    <a href="./work.html">Work</a>
+                </li>
+            
+                <li class="nav__link nav__link--right-margin">
+                    <a href="./resume.html">Resume</a>
+                </li>
+            
+                <li class="nav__logo"></li>
+            
+                <li class="nav__link nav__link--left-margin">
+                    <a href="./about.html">About</a>
+                </li>
+            
+                <li class="nav__link">
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <script>
+            Snap.load("./svg/logo.svg", function(f){
+                var group = f.selectAll('g');
+            
+                (function circleAnimation(){
+                    group.animate(
+                        { transform: 'r360,25,25' },
+                    
+                        2500,
+                    
+                        mina.elastic,
+                    
+                        function(){ 
+                            group.attr({ transform: 'rotate(0 25 25)' });
+                        
+                            setTimeout(function(){
+                                circleAnimation();
+                            }, 30000);
+                        }
+                    );
+                })();
+            
+                Snap.select('.nav__logo').append(f);
+            
+                $('.nav__logo svg').wrap('<a class="logo__link" href="./index.html"></a>');
+            });
+        </script>
+        
+        <div class="master-container fade-el fade-el--faded-out fade-el--accelerated">
+            <header class="header header--pink">
+                <h1 class="h1 h1--white">Work</h1>
+                
+                <div class="triangle triangle--big triangle--gray"></div>
+                <div class="triangle triangle--small triangle--white"></div>
+            </header>
+            
+            <section class="container container--white container--1280 js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-big">Web design</h2>
+                
+                <div class="block block--two-thirds block--border block--padded">
+                    <h3 class="h3 h3--gray">Featured work</h3>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/focus-on-force/main/index.html" class="text-link text-link--gray text-link--bold text-link--big">Focus on Force</a>.
+                        I did the web design and development for the Orlando Sentinel's 10-month investigation into use of force by the Orlando Police Department.
+                        This required collaborating with reporters, editors, videographers and data analysts, as well as obsessive device and browser testing.
+                        To improve load time, I built in JavaScript functionality to load assets (like photos and graphics) only when users are about to scroll to them.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/mental-illness/index.html" class="text-link text-link--gray text-link--bold text-link--big">In Crisis</a>.
+                        I also did the web design and development for the Orlando Sentinel's weeklong series on mental illness in Central Florida.
+                        The project went on to take <a target="_blank" href="http://fsne.org/news/2015/07/20/2015-fsne-journalism-contest-results/" class="text-link text-link--gray text-link--light text-link--small">first place</a> in the multimedia category of the 2015 Florida Society of News Editors contest.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/soul-of-orlando/main/index.html" class="text-link text-link--gray text-link--bold text-link--big">Soul of Orlando</a>.
+                        It was my job to take a reporter's extensive look into what defines Orlando and make it usable and pretty online.
+                        The interactive components were also my responsibility.
+                        I used JavaScript libraries like <a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a> to make this project pop and techniques like lazy loading and preloading to deal with image-heavy pages.
+                    </p>
+                </div>
+                
+                <div class="block block--third-last block--padded">
+                    <h3 class="h3 h3--gray">Others</h3>
+                    
+                    <ul class="list">
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/coast-to-coast/index.html" class="text-link text-link--gray text-link--light text-link--small">Biking across the length of Florida</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/trails/index.html" class="text-link text-link--gray text-link--light text-link--small">Unpaved trails of Central Florida</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/o-mazing/index.html" class="text-link text-link--gray text-link--light text-link--small">O-Mazing Orlando</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/international-drive/index.html" class="text-link text-link--gray text-link--light text-link--small">An Eye on I-Drive</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/bridges/#header" class="text-link text-link--gray text-link--light text-link--small">Bridges to adventure</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--gray container--1280 container--rounded js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-big">Databases</h2>
+                
+                <div class="block block--two-thirds block--border block--padded">
+                    <h3 class="h3 h3--gray">Featured work</h3>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.growthspotter.com/central-florida-real-estate-sales/" class="text-link text-link--gray text-link--bold text-link--big">Central Florida real estate sales</a>.
+                        GrowthSpotter is an Orlando Sentinel-owned publication that aims to reach land developers in the region.
+                        For its launch, I was tasked with building a tool highlighting recent commercial property sales.
+                        I accomplished this by using a combination of technologies, including PHP, <a target="_blank" href="http://requirejs.org/" class="text-link text-link--gray text-link--light text-link--small">RequireJS</a> and <a target="_blank" href="http://handlebarsjs.com/" class="text-link text-link--gray text-link--light text-link--small">Handlebars</a>.
+                        Special thanks to my project manager, who also helped me understand the data.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/focus-on-force/incidents-database/index.html" class="text-link text-link--gray text-link--bold text-link--big">Orlando police uses of force</a>.
+                        After a team of interns and reporters painstakingly entered thousands of data points about the Orlando Police Department's use of force, it was my turn to step in.
+                        The goal? Make all of that information searchable and easy to understand.
+                        It took one heck of a Handlebars template, some crazy data normalization via PHP and a little bit of <a target="_blank" href="http://browserify.org/" class="text-link text-link--gray text-link--light text-link--small">Browserify</a>, but it all worked out in the end.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/health-inspections/index.html" class="text-link text-link--gray text-link--bold text-link--big">Failed restaurant health inspections</a>.
+                        This was a fun one. I wrote a scraper that runs weekly and looks for all restaurants that failed inspections.
+                        It then formats that information and dumps it into a <a target="_blank" href="https://www.datatables.net/" class="text-link text-link--gray text-link--light text-link--small">DataTable</a>.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/national-signing-day-2015/central-florida.html" class="text-link text-link--gray text-link--bold text-link--big">National Signing Day 2015</a>.
+                        Central Floridians are crazy about high school football, so, as the cliche goes, failure was not an option.
+                        I developed a system through which reporters and editors could enter and update signings, and that information would be reflected immediately online.
+                        I chose responsive <a target="_blank" href="https://www.datatables.net/" class="text-link text-link--gray text-link--light text-link--small">DataTables</a> for the presentation.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/central-florida-holiday-events-guide/" class="text-link text-link--gray text-link--bold text-link--big">Holiday events guide</a>.
+                        Why did I include this? Because I built it with <a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a>. And I love React.
+                    </p>
+                </div>
+                
+                <div class="block block--third-last block--padded">
+                    <h3 class="h3 h3--gray">Others</h3>
+                    
+                    <ul class="list">
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/recruiting/2016/central-florida-super60/" class="text-link text-link--gray text-link--light text-link--small">College football recruiting tables</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/mls-salaries/" class="text-link text-link--gray text-link--light text-link--small">MLS salaries</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/summer-camp-guide/" class="text-link text-link--gray text-link--light text-link--small">Summer camp guide</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--white container--1280 js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-big">Maps</h2>
+                
+                <div class="block block--two-thirds block--border block--padded">
+                    <h3 class="h3 h3--gray">Featured work</h3>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/florida-brewery-map/" class="text-link text-link--gray text-link--bold text-link--big">Florida breweries map</a>.
+                        This map uses the magic of <a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a> to bind <a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a> map points to a JSON list of breweries.
+                        For development, I used a robust <a target="_blank" href="https://webpack.github.io/" class="text-link text-link--gray text-link--light text-link--small">Webpack</a> setup that included ES2015 compiling via <a target="_blank" href="https://babeljs.io/" class="text-link text-link--gray text-link--light text-link--small">Babel</a>, <a target="_blank" href="http://glenmaddern.com/articles/css-modules" class="text-link text-link--gray text-link--light text-link--small">CSS modules</a> and <a target="_blank" href="https://webpack.github.io/docs/hot-module-replacement.html" class="text-link text-link--gray text-link--light text-link--small">hot-module replacement</a>.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/focus-on-force/incidents-map/index.html" class="text-link text-link--gray text-link--bold text-link--big">Orlando police uses of force</a>.
+                        This one is another combination of <a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a> and <a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a>.
+                        It adds <a target="_blank" href="https://github.com/Leaflet/Leaflet.markercluster" class="text-link text-link--gray text-link--light text-link--small">Leaflet MarkerCluster</a> to reduce the chaos.
+                        I wrote the JavaScript in the format of Node.js modules, then bundled everything with <a target="_blank" href="http://browserify.org/" class="text-link text-link--gray text-link--light text-link--small">Browserify</a>.
+                        Thanks to my GIS-whiz colleague, who built the GeoJSON file.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/active-emergency-calls/map/index.html" class="text-link text-link--gray text-link--bold text-link--big">Active Orlando Police Department calls</a>.
+                        A scraper gathers active-call data from a city website and dumps it on a map.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.growthspotter.com/central-florida-development-map/" class="text-link text-link--gray text-link--bold text-link--big">Central Florida development projects</a>.
+                        GrowthSpotter is an Orlando Sentinel-owned publication that aims to reach land developers in the region.
+                        Its reporters wanted a way to visualize the various construction projects on a map.
+                        So I built a visualization system powered by <a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a> and <a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a>.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/central-florida-homicide-map/" class="text-link text-link--gray text-link--bold text-link--big">Central Florida homicides</a>.
+                        The region might be known for Disney, but it's not without its share of violent crime.
+                        Reporters do all the data entry for this project, so it made sense to power it with <a target="_blank" href="https://github.com/jsoma/tabletop" class="text-link text-link--gray text-link--light text-link--small">Tabletop</a>.
+                        From there, it's <a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a> for the map and <a target="_blank" href="http://handlebarsjs.com/" class="text-link text-link--gray text-link--light text-link--small">Handlebars</a> for the information.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/florida-redistricting-2014/index_full-width.html" class="text-link text-link--gray text-link--bold text-link--big">Florida redistricting maps</a>.
+                        A colleague handled the geography files, and I handled the code.
+                        The result? An interactive look at how the state's congressional districts changed as a result of redistricting.
+                    </p>
+                </div>
+                
+                <div class="block block--third-last block--padded">
+                    <h3 class="h3 h3--gray">Others</h3>
+                    
+                    <ul class="list">
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/soul-of-orlando/washington-street-tour/" class="text-link text-link--gray text-link--light text-link--small">Washington Street tour</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/wikipedia-map/" class="text-link text-link--gray text-link--light text-link--small">Wikipedia articles near you</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/florida-voter-registration/" class="text-link text-link--gray text-link--light text-link--small">Florida voter registration</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--gray container--800 container--rounded js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-small">Elections</h2>
+                
+                <div class="block block--full block--padded">
+                    <p class="text text--gray">
+                        Less than six months after starting at the Orlando Sentinel, I was assigned a 10,000-pound gorilla of a project.
+                        The task: Build an election scraper that can provide general- and municipal-election results for two news organizations: Orlando Sentinel and the South Florida Sun-Sentinel.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        Hundreds of lines of code later, and with the help of a shrewd project manager, I wrapped up development on a JSON-producing tool that could pull results from several different sources, including CSV files and outdated government websites.
+                        As of January 2016, it has had two runs powering highly trafficked election-results pages.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        I also built this <a target="_blank" href="http://interactive.orlandosentinel.com/elections-2014/results-map-os/" class="text-link text-link--gray text-link--light text-link--small">results map</a> for the 2014 general election.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--1280 js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-big">Quizzes</h2>
+                
+                <div class="block block--two-thirds block--border block--padded">
+                    <h3 class="h3 h3--gray">Featured work</h3>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/quiz/how-central-florida-are-you/" class="text-link text-link--gray text-link--bold text-link--big">How Central Florida are you?</a>
+                        The video results are my favorite part.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/quiz/magical-dining-month/" class="text-link text-link--gray text-link--bold text-link--big">Magical Dining Month</a>.
+                        Inspired by BuzzFeed.
+                    </p>
+                </div>
+                
+                <div class="block block--third-last block--padded">
+                    <h3 class="h3 h3--gray">Others</h3>
+                    
+                    <ul class="list">
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/christmas-songs-quiz/" class="text-link text-link--gray text-link--light text-link--small">Christmas Songs</a></li>.
+                        <li><a target="_blank" href="http://www.orlandosentinel.com/entertainment/star-wars/os-star-wars-quiz-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">Star Wars</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--gray container--1280 js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-big">Graphics</h2>
+                
+                <div class="block block--two-thirds block--border block--padded">
+                    <h3 class="h3 h3--gray">Featured work</h3>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/corporate5K/" class="text-link text-link--gray text-link--bold text-link--big">Corporate 5K times</a>.
+                        This was my first true stab at <a target="_blank" href="http://d3js.org/" class="text-link text-link--gray text-link--light text-link--small">d3</a>.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://www.orlandosentinel.com/features/education/os-school-vaccination-rates-central-florida-orlando-htmlstory.html" class="text-link text-link--gray text-link--bold text-link--big">School vaccination rates</a>.
+                        This one mashes together a few of my favorite libraries, including <a target="_blank" href="https://jqueryui.com/autocomplete/" class="text-link text-link--gray text-link--light text-link--small">jQuery UI autocomplete</a> and <a target="_blank" href="http://www.chartjs.org/" class="text-link text-link--gray text-link--light text-link--small">Chart.js</a>.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://www.orlandosentinel.com/business/os-central-florida-jobs-by-industry-historic-htmlstory.html" class="text-link text-link--gray text-link--bold text-link--big">Central Florida jobs by industry</a>.
+                        This graphic also uses <a target="_blank" href="http://www.chartjs.org/" class="text-link text-link--gray text-link--light text-link--small">Chart.js</a>.
+                        Some custom JavaScript makes it interactive.
+                    </p>
+                </div>
+                
+                <div class="block block--third-last block--padded">
+                    <h3 class="h3 h3--gray">Others</h3>
+                    
+                    <ul class="list">
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/heisman-returnees/" class="text-link text-link--gray text-link--light text-link--small">Heisman returnees</a></li>
+                        <li><a target="_blank" href="http://www.orlandosentinel.com/news/breaking-news/os-alex-mazzan-shooting-death-timeline-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">Alex Mazzan shooting death timeline</a></li>
+                        <li><a target="_blank" href="http://www.orlandosentinel.com/news/local/os-florida-citrus-crop-production-history-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">Florida citrus production</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--white container--1280 js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-big">Other stuff</h2>
+                
+                <div class="block block--two-thirds block--border block--padded">
+                    <h3 class="h3 h3--gray">Featured work</h3>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://traffic.orlandosentinel.com/I4/reports/" class="text-link text-link--gray text-link--bold text-link--big">I-4 Misery Index</a>.
+                        A massive overhaul of Interstate 4 is underway in Central Florida, meaning gridlock is becoming the norm.
+                        Using <a target="_blank" href="https://angularjs.org/" class="text-link text-link--gray text-link--light text-link--small">Angular</a>, I built a tool that gives people a real-time look at traffic conditions in the region.
+                        Users can also build custom routes that can be stored for easy access later.
+                        Special thanks to two colleagues (a data analyst and a graphic designer) for their work on this.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/soul-of-orlando/perspectives/" class="text-link text-link--gray text-link--bold text-link--big">Perspectives on Orlando's soul</a>.
+                        The <a target="_blank" href="https://developers.google.com/youtube/iframe_api_reference?hl=en" class="text-link text-link--gray text-link--light text-link--small">YouTube IFrame Player API</a> and <a target="_blank" href="http://kenwheeler.github.io/slick/" class="text-link text-link--gray text-link--light text-link--small">Slick carousel</a> made this video presentation possible.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/soul-of-orlando/neighbors-tour/" class="text-link text-link--gray text-link--bold text-link--big">A look at Orlando's neighbors</a>.
+                        Thank goodness for CSS transforms and image preloading.
+                    </p>
+                </div>
+                
+                <div class="block block--third-last block--padded">
+                    <h3 class="h3 h3--gray">Others</h3>
+                    
+                    <ul class="list">
+                        <li><a target="_blank" href="http://www.orlandosentinel.com/sports/highschool/football/os-top-central-florida-high-school-football-plays-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">Top high school football plays</a></li>
+                        <li><a target="_blank" href="http://www.orlandosentinel.com/entertainment/restaurants/os-best-orlando-restaurants-2014-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">Best restaurants contest results</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="container container--gray container--800 container--rounded js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-small">Newsroom apps</h2>
+                
+                <div class="block block--full block--padded">
+                    <p class="text text--gray">
+                        In my time at the Orlando Sentinel, I've built tools to improve our website and the workflow of the people around me.
+                        These include a social-images generator (similar to <a target="_blank" href="https://github.com/voxmedia/meme" class="text-link text-link--gray text-link--light text-link--small">this</a>) and live-updating scoreboards and event listings.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="container container--white container--800 container--rounded js__scroll-to">
+                <h2 class="h2 h2--gray h2--margin-bottom-small">Knight Foundation grant</h2>
+                
+                <div class="block block--full block--padded">
+                    <p class="text text--gray">
+                        In early 2015, the Knight Foundation offered $35,000 <a target="_blank" href="http://knightfoundation.org/funding-initiatives/knight-prototype-fund/" class="text-link text-link--gray text-link--light text-link--small">Prototype Fund grants</a> to certain organizations that could answer the following question: "How might we better inform voters and increase civic participation before, during and after elections?"
+                    </p>
+                    
+                    <p class="text text--gray">
+                        A colleague and I spearheaded the application process for the Orlando Sentinel.
+                        We proposed a project called "Tabs on Tallahassee," which would consist of an open-source web application and API that unlock voting records tucked away on the Florida House and Senate websites.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        The foundation liked our idea and <a target="_blank" href="http://www.orlandosentinel.com/news/politics/os-tabs-on-tallahassee-grant-20150722-story.html" class="text-link text-link--gray text-link--light text-link--small">awarded us the money</a>.
+                        For the next six months, my coworker and I served as project managers, ensuring key milestones were met and that our contracted developers had what they needed.
+                        We now have a <a target="_blank" href="https://tabsontallahassee.com/" class="text-link text-link--gray text-link--light text-link--small">fully functioning web application</a>, and we recently had a <a target="_blank" href="http://www.meetup.com/Code-For-Orlando/events/227297615/" class="text-link text-link--gray text-link--light text-link--small">hackathon</a> around the API.
+                    </p>
+                </div>
+            </section>
+            
+            <footer class="footer">
+                <ul class="footer__social">
+                    <li>
+                        <a target="_blank" href="https://github.com/AndrewGibson27">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/andrewtgibson/">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                         </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/andrewgibson27">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                
+                <p class="footer__link">
+                    Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>, <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+                </p>
+                
+                <p class="footer__link">
+                    Like my website? <a href="https://github.com/AndrewGibson27/andrew-gibson-portfolio">Get the code</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+    <script src="js/libs-bottom.js"></script>
+    <script src="js/bundle.js"></script>
+</html>

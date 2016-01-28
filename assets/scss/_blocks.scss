@@ -1,0 +1,51 @@
+.block {
+    box-sizing: border-box;
+}
+
+
+.block--full {
+    width: 100%;
+}
+
+.block--half {
+    width: 50%;
+    float: left;
+}
+
+.block--two-thirds {
+    float: left;
+    width: 66%;
+}
+
+.block--third {
+    width: 33%;
+    float: left;
+}
+
+    .block--third-last {
+        width: 34%;
+        float: left;
+    }
+
+
+.block--padded {
+    padding: 0 2%;
+}
+
+.block--border {
+    border-right: 2px solid $light-gray;
+}
+
+[class*=block] {
+    @include bp(stack) {
+        float: none;
+        width: 100%;
+        border-right: none;
+        margin-top: 2.5em;
+        @include clearfix;
+        
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+}

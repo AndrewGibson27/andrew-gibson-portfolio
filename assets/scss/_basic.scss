@@ -1,0 +1,24 @@
+html {
+    background-color: #FFF;
+    font-size: 10px;
+}
+
+*::selection {
+    background-color: $pink;
+    color: #FFF;
+}
+
+.master-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 50px;
+    background-color: #FFF;
+    font-size: 1em;
+    @include clearfix;
+    
+    @include bp(stack) {
+        font-size: .8em;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Andrew Gibson | Interactive developer and journalist</title>
+        
+        <script src="js/modernizr.js"></script>
+        <script>
+            if (!Modernizr.svg) {
+                window.location.href = "http://browsehappy.com/";
+            }
+        </script>
+        
+        <link rel="stylesheet" type="text/css" href="css/libs.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        
+        <script src="js/modernizr.js"></script>
+        <script src="js/libs-top.js"></script>
+    </head>
+    <body>
+        <nav class="nav nav--pink-stripe">
+            <span class="nav__hamburger" id="js__hamburger"></span>
+            
+            <ul class="nav__links">
+                <li class="nav__link">
+                    <a href="./work.html">Work</a>
+                </li>
+            
+                <li class="nav__link nav__link--right-margin">
+                    <a href="./resume.html">Resume</a>
+                </li>
+            
+                <li class="nav__logo"></li>
+            
+                <li class="nav__link nav__link--left-margin">
+                    <a href="./about.html">About</a>
+                </li>
+            
+                <li class="nav__link">
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <script>
+            Snap.load("./svg/logo.svg", function(f){
+                var group = f.selectAll('g');
+            
+                (function circleAnimation(){
+                    group.animate(
+                        { transform: 'r360,25,25' },
+                    
+                        2500,
+                    
+                        mina.elastic,
+                    
+                        function(){ 
+                            group.attr({ transform: 'rotate(0 25 25)' });
+                        
+                            setTimeout(function(){
+                                circleAnimation();
+                            }, 30000);
+                        }
+                    );
+                })();
+            
+                Snap.select('.nav__logo').append(f);
+            
+                $('.nav__logo svg').wrap('<a class="logo__link" href="./index.html"></a>');
+            });
+        </script>
+        
+        <div class="master-container fade-el fade-el--faded-out fade-el--accelerated">
+            <header class="main-header">
+                <div class="main-header__text">
+                    <h1>Andrew Gibson</h1>
+                    <h2>Don't hire me if you're looking for someone who's half-journalist, half-developer. Instead, if you need someone who's 100 percent of both, I'm your guy. I leverage modern web development practices to tell stories in the cleanest, most compelling way possible.</h2>
+                </div>
+                
+                <div class="triangle triangle--big triangle--pink"></div>
+                <div class="triangle triangle--small triangle--white"></div>
+            </header>
+            
+            <div class="container container--independent container--white container--1440 container--min-height">
+                <div class="block block--third block--padded block--border">
+                    <h2 class="h2 h2--gray">Explore</h2>
+                    <p class="text text--gray text--center">my work and see how I use code to enhance stories, not detract from them.</p>
+                    <a class="button-link button-link--pink button-link--margin-top" href="./work.html">
+                        Let's go
+                    </a>
+                </div>
+                
+                <div class="block block--third block--padded block--border">
+                    <h2 class="h2 h2--gray">View</h2>
+                    <p class="text text--gray text--center">my resume and learn about the modern development practices I use each day.</p>
+                    <a class="button-link button-link--pink button-link--margin-top" href="./resume.html">
+                        I'm ready
+                    </a>
+                </div>
+                
+                <div class="block block--third-last block--padded">
+                    <h2 class="h2 h2--gray">Learn</h2>
+                    <p class="text text--gray text--center">more about me and my passion for Denver Broncos football, coffee and The Great Gatsby.</p>
+                    <a class="button-link button-link--pink button-link--margin-top" href="./about.html">
+                        OK, I guess
+                    </a>
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <ul class="footer__social">
+                    <li>
+                        <a target="_blank" href="https://github.com/AndrewGibson27">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/andrewtgibson/">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                         </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/andrewgibson27">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                
+                <p class="footer__link">
+                    Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>, <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+                </p>
+                
+                <p class="footer__link">
+                    Like my website? <a href="https://github.com/AndrewGibson27/andrew-gibson-portfolio">Get the code</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+    <script src="js/libs-bottom.js"></script>
+    <script src="js/bundle.js"></script>
+</html>

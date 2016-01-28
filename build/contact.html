@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact | Andrew Gibson | Interactive developer and journalist</title>
+        
+        <script src="js/modernizr.js"></script>
+        <script>
+            if (!Modernizr.svg) {
+                window.location.href = "http://browsehappy.com/";
+            }
+        </script>
+        
+        <link rel="stylesheet" type="text/css" href="css/libs.css">
+        <link rel="stylesheet" type="text/css" href="css/contact.css">
+        
+        <script src="js/modernizr.js"></script>
+        <script src="js/libs-top.js"></script>
+    </head>
+    <body>
+        <nav class="nav nav--white-stripe">
+            <span class="nav__hamburger" id="js__hamburger"></span>
+            
+            <ul class="nav__links">
+                <li class="nav__link">
+                    <a href="./work.html">Work</a>
+                </li>
+            
+                <li class="nav__link nav__link--right-margin">
+                    <a href="./resume.html">Resume</a>
+                </li>
+            
+                <li class="nav__logo"></li>
+            
+                <li class="nav__link nav__link--left-margin">
+                    <a href="./about.html">About</a>
+                </li>
+            
+                <li class="nav__link nav__link--current">
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <script>
+            Snap.load("./svg/logo.svg", function(f){
+                var group = f.selectAll('g');
+            
+                (function circleAnimation(){
+                    group.animate(
+                        { transform: 'r360,25,25' },
+                    
+                        2500,
+                    
+                        mina.elastic,
+                    
+                        function(){ 
+                            group.attr({ transform: 'rotate(0 25 25)' });
+                        
+                            setTimeout(function(){
+                                circleAnimation();
+                            }, 30000);
+                        }
+                    );
+                })();
+            
+                Snap.select('.nav__logo').append(f);
+            
+                $('.nav__logo svg').wrap('<a class="logo__link" href="./index.html"></a>');
+            });
+        </script>
+        
+        <div class="master-container fade-el fade-el--faded-out fade-el--accelerated">
+            <header class="header header--pink">
+                <h1 class="h1 h1--white">Contact</h1>
+                
+                <div class="triangle triangle--big triangle--gray"></div>
+                <div class="triangle triangle--small triangle--white"></div>
+            </header>
+            
+            <section class="container container--white container--800">
+                <h2 class="h2 h2--gray h2--margin-bottom-small">Email</h2>
+                <ul class="list list--centered">
+                    <li>atgibson27@gmail.com</li>
+                    <li>atgibson@orlandosentinel.com</li>
+                </ul>
+            </section>
+            
+            <section class="container container--white container--800">
+                <h2 class="h2 h2--gray h2--margin-bottom-small">Twitter</h2>
+                <ul class="list list--centered">
+                    <li>@AndrewGibson27</li>
+                </ul>
+            </section>
+            
+            <section class="container container--white container--800">
+                <h2 class="h2 h2--gray h2--margin-bottom-small">Snail mail</h2>
+                <ul class="list list--centered">
+                    <li>Yeah, right.</li>
+                </ul>
+            </section>
+            
+            <footer class="footer">
+                <ul class="footer__social">
+                    <li>
+                        <a target="_blank" href="https://github.com/AndrewGibson27">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/andrewtgibson/">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                         </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/andrewgibson27">
+                            <svg class="icon shape-codepen">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                
+                <p class="footer__link">
+                    Icons made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a>, <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+                </p>
+                
+                <p class="footer__link">
+                    Like my website? <a href="https://github.com/AndrewGibson27/andrew-gibson-portfolio">Get the code</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+    <script src="js/libs-bottom.js"></script>
+    <script src="js/bundle.js"></script>
+</html>

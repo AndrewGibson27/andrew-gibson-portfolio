@@ -1,0 +1,57 @@
+$header-bg-image: (
+    (name: header-big, bp: 'min-width: 1281px'),
+    (name: header-medium, bp: 'max-width: 1280px'),
+    (name: header-small, bp: 'max-width: 799px')
+);
+
+.main-header {
+    position: relative;
+    z-index: 1;
+    @include retina-bg($header-bg-image);
+    background-size: cover;
+    font-size: 1em;
+    padding: 30px 7% 7em 7%;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.8);
+    }
+    
+    @include bp(first-header-shrink) {
+        font-size: .8em;
+    }
+    
+    @include bp(second-header-shrink) {
+        font-size: .7em;
+    }
+}
+
+    .main-header__text {
+        h1 {
+            font-family: $bold-heading;
+            text-align: center;
+            font-size: 12em;
+            color: #FFF;
+            position: relative;
+            z-index: 1;
+            text-shadow: 3px 1px 1px rgba(234, 10, 142, .8);
+            line-height: 100%;
+        }
+    
+        h2 {
+            max-width: 1000px;
+            margin: 10px auto 0 auto;
+            font-family: $regular-body;
+            font-size: 3.2em;
+            line-height: 160%;
+            color: #FFF;
+            position: relative;
+            z-index: 1;
+            text-shadow: 1px 1px 1px rgba(50, 50, 50, .8);
+        }
+    }

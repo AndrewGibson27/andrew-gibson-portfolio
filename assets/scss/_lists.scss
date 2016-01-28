@@ -1,0 +1,36 @@
+.list {
+    box-sizing: border-box;
+    padding-left: 20px;
+    
+    li {
+        font-family: $light-body;
+        color: $dark-gray;
+        font-size: 2em;
+        line-height: 160%;
+        margin-top: 15px;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }   
+}
+
+.list--margin-top {
+    margin-top: 2em;
+}
+
+.list--floated {
+    float: left;
+    width: 50%;   
+}
+
+.list--centered {
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+        text-align: center;
+    }
+}

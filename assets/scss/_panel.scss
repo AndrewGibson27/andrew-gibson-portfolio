@@ -1,0 +1,64 @@
+.panel__outer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
+    background: transparent;
+    z-index: 1;
+}
+
+    .panel {
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 300px;
+        min-height: 60px;
+        margin-left: -150px;
+        padding: 10px 5px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        opacity: .9;
+        transform: translate3d(0,0,0);
+        z-index: 1;
+    
+        p {
+            text-align: center;
+            font-family: $regular-body;
+            font-size: 1.6em;
+        }
+    }
+
+    .panel--hidden {
+        display: none;
+    }
+
+    .panel--independent {
+        font-size: 10px;
+    }
+
+    .panel--pink {
+        background-color: $pink;
+    
+        p {
+            color: #FFF;
+        }
+    }
+
+        .panel__close {
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            right: 6px;
+            font-size: 2em;
+            cursor: pointer;
+        
+            .panel--pink & {
+                color: $light-gray;
+            
+                &:hover, &:active {
+                    color: $dark-gray;
+                }
+            }
+        }

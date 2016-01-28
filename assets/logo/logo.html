@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <title>SVG Logo Result</title>
+        
+        <script src="../libs/js/snap.svg.js"></script>
+        <script src="../libs/js/jquery.js"></script>
+        
+        <style>
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+            
+                .logo__link {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    color: transparent;
+                    text-decoration: none;
+                }
+                
+                .logo__link:active {
+                    opacity: .5;
+                }
+        
+                    .logo__svg {
+                        display: block;
+                        height: 50px;
+                    }
+        </style>
+    </head>
+    <body>
+        <p>This page shows my logo, which I build with Snap.svg. I don't want my website pages to have to build the logo every time with JavaScript, so I build it once here and then copy/paste it where it needs to go.</p>
+    
+        <div class="logo"></div>
+    </body>
+    <script>
+        Snap.load("logo.svg", function(f){
+            var group = f.selectAll('g');
+            
+            (function circleAnimation(){
+                group.animate(
+                    { transform: 'r360,25,25' },
+                    
+                    2500,
+                    
+                    mina.elastic,
+                    
+                    function(){ 
+                        group.attr({ transform: 'rotate(0 25 25)' });
+                        
+                        setTimeout(function(){
+                            circleAnimation();
+                        }, 30000);
+                    }
+                );
+            })();
+            
+            Snap.select('.logo').append(f);
+            
+            $('.logo svg').wrap('<a class="logo__link" href="./index.html"></a>');
+        });
+    </script>
+</html>

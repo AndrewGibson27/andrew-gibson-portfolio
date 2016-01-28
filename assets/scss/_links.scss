@@ -1,0 +1,93 @@
+.button-link {
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 200px;
+    padding: 20px 0;
+    font-family: $regular-body;
+    font-size: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    
+    &:hover, &:active {
+        &:before {
+            transform: translateY(0%);
+        }
+    }
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform .1s ease-in-out;
+        transform: translateY(100%);
+        opacity: .3;
+    }
+}
+
+.button-link--margin-top {
+    margin-top: 2em;
+    
+    @include bp(stack) {
+        margin-top: 1em;
+    }
+}
+
+.button-link--pink {
+    background-color: $pink;
+    color: #FFF;
+    
+    &:before {
+        background-color: $dark-gray;
+    }
+}
+
+.text-link {
+    text-decoration: none;
+    
+    &:visited {
+        color: inherit;
+    }
+}
+
+.text-link--big {
+    font-size: 1.1em;
+}
+
+.text-link--small {
+    font-size: inherit;
+}
+
+.text-link--gray {
+    color: $dark-gray;
+    border-bottom: 2px solid #AEAEAE;
+    
+    &:hover, &:active {
+        color: lighten($dark-gray, 20%);
+    }
+}
+
+.text-link--bold {
+    font-family: $bold-body;
+}
+
+.text-link--light {
+    font-family: $light-body;
+}
+
+.panel-link {
+    text-decoration: underline;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    
+    &:hover, &:active {
+        text-decoration: none;
+    }
+}

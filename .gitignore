@@ -1,0 +1,10 @@
+.*
+!.gitignore
+!.babelrc
+!/**/.gitkeep
+
+/node_modules/
+/bower_components/
+
+/build/js/**/*.js
+/build/css/**/*.css
