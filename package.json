@@ -12,6 +12,7 @@
     "url": ""
   },
   "scripts": {
+    "fetch-libs": "gulp fetch-js-libs && gulp fetch-css-libs",
     "bundle-libs": "gulp bundle-css-libs && gulp bundle-bottom-page-js-libs && gulp bundle-top-page-js-libs",
     "build": "npm run bundle-libs && gulp move-modernizr && gulp prepare-my-css && npm run bundle-prod",
     "bundle-prod": "browserify ./src/main.js -t [ babelify ] | uglifyjs > ./build/js/bundle.js",
