@@ -89,6 +89,7 @@
                         I did the web design and development for the Orlando Sentinel's 10-month investigation into use of force by the Orlando Police Department.
                         This required collaborating with reporters, editors, videographers and data analysts, as well as obsessive device and browser testing.
                         To improve load time, I built in JavaScript functionality to load assets (like photos and graphics) only when users are about to scroll to them.
+                        The project went on to take <a target="_blank" href="http://fsne.org/news/2016/05/24/2016-fsne-journalism-contest-results/" class="text-link text-link--gray text-link--light text-link--small">first place</a> in the multimedia category of the 2016 Florida Society of News Editors contest.
                     </p>
                     
                     <p class="text text--gray">
@@ -109,6 +110,7 @@
                     <h3 class="h3 h3--gray">Others</h3>
                     
                     <ul class="list">
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/east-central-florida-land-development/index.html" class="text-link text-link--gray text-link--light text-link--small">East of Econ</a></li>
                         <li><a target="_blank" href="http://interactive.orlandosentinel.com/coast-to-coast/index.html" class="text-link text-link--gray text-link--light text-link--small">Biking across the length of Florida</a></li>
                         <li><a target="_blank" href="http://interactive.orlandosentinel.com/trails/index.html" class="text-link text-link--gray text-link--light text-link--small">Unpaved trails of Central Florida</a></li>
                         <li><a target="_blank" href="http://interactive.orlandosentinel.com/o-mazing/index.html" class="text-link text-link--gray text-link--light text-link--small">O-Mazing Orlando</a></li>
@@ -190,6 +192,21 @@
                     </p>
                     
                     <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/central-florida-homicide-map/" class="text-link text-link--gray text-link--bold text-link--big">Central Florida homicides</a>.
+                        The region might be known for Disney, but it's not without its share of violent crime.
+                        Reporters do all the data entry for this project, so it made sense to power it with <a target="_blank" href="https://github.com/jsoma/tabletop" class="text-link text-link--gray text-link--light text-link--small">Tabletop</a>.
+                        From there, it's <a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a> for the map and <a target="_blank" href="http://handlebarsjs.com/" class="text-link text-link--gray text-link--light text-link--small">Handlebars</a> for the information.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/central-florida-homicide-map/" class="text-link text-link--gray text-link--bold text-link--big">Precinct-by-precinct Florida primary results</a>.
+                        Who doesn't like to know how their neighbors voted in an election?
+                        OK, the map isn't that specific &mdash; but it does give granular insight into how Florida voted in the 2016 presidential primary.
+                        The map is powered by <a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a> and <a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a> and relies on ajax to only pull in a single county's geography at a time.
+                        My co-worker did lots of data magic to make this work, too.
+                    </p>
+                    
+                    <p class="text text--gray">
                         <a target="_blank" href="http://interactive.orlandosentinel.com/active-emergency-calls/map/index.html" class="text-link text-link--gray text-link--bold text-link--big">Active Orlando Police Department calls</a>.
                         A scraper gathers active-call data from a city website and dumps it on a map.
                     </p>
@@ -199,13 +216,6 @@
                         GrowthSpotter is an Orlando Sentinel-owned publication that aims to reach land developers in the region.
                         Its reporters wanted a way to visualize the various construction projects on a map.
                         So I built a visualization system powered by <a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a> and <a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a>.
-                    </p>
-                    
-                    <p class="text text--gray">
-                        <a target="_blank" href="http://interactive.orlandosentinel.com/central-florida-homicide-map/" class="text-link text-link--gray text-link--bold text-link--big">Central Florida homicides</a>.
-                        The region might be known for Disney, but it's not without its share of violent crime.
-                        Reporters do all the data entry for this project, so it made sense to power it with <a target="_blank" href="https://github.com/jsoma/tabletop" class="text-link text-link--gray text-link--light text-link--small">Tabletop</a>.
-                        From there, it's <a target="_blank" href="http://leafletjs.com/" class="text-link text-link--gray text-link--light text-link--small">Leaflet</a> for the map and <a target="_blank" href="http://handlebarsjs.com/" class="text-link text-link--gray text-link--light text-link--small">Handlebars</a> for the information.
                     </p>
                     
                     <p class="text text--gray">
@@ -222,6 +232,7 @@
                         <li><a target="_blank" href="http://interactive.orlandosentinel.com/soul-of-orlando/washington-street-tour/" class="text-link text-link--gray text-link--light text-link--small">Washington Street tour</a></li>
                         <li><a target="_blank" href="http://interactive.orlandosentinel.com/wikipedia-map/" class="text-link text-link--gray text-link--light text-link--small">Wikipedia articles near you</a></li>
                         <li><a target="_blank" href="http://interactive.orlandosentinel.com/florida-voter-registration/" class="text-link text-link--gray text-link--light text-link--small">Florida voter registration</a></li>
+                        <li><a target="_blank" href="http://interactive.growthspotter.com/central-florida-development-map/" class="text-link text-link--gray text-link--light text-link--small">Central Florida development projects</a></li>
                     </ul>
                 </div>
             </section>
@@ -236,12 +247,12 @@
                     </p>
                     
                     <p class="text text--gray">
-                        Hundreds of lines of code later, and with the help of a shrewd project manager, I wrapped up development on a JSON-producing tool that could pull results from several different sources, including CSV files and outdated government websites.
-                        As of January 2016, it has had two runs powering highly trafficked election-results pages.
+                        Fast forward nearly two years and two iterations of the project later, and I have delivered three successful elections as the only developer working on the tool.
+                        What technology have I used? PHP a bit, but mostly some Python and Django jazz, including <a target="_blank" href="https://django-bakery.readthedocs.io/en/latest/" class="text-link text-link--gray text-link--light text-link--small">Django Bakery</a> and <a target="_blank" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" class="text-link text-link--gray text-link--light text-link--small">Beautiful Soup</a>.
                     </p>
                     
                     <p class="text text--gray">
-                        I also built this <a target="_blank" href="http://interactive.orlandosentinel.com/elections-2014/results-map-os/" class="text-link text-link--gray text-link--light text-link--small">results map</a> for the 2014 general election.
+                        I also built this <a target="_blank" href="http://www.orlandosentinel.com/news/politics/os-florida-presidential-primary-municipal-election-results-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">results page</a> for the 2016 presidential primary and <a target="_blank" href="http://interactive.orlandosentinel.com/elections-2014/results-map-os/" class="text-link text-link--gray text-link--light text-link--small">this one</a> for the 2014 general election.
                     </p>
                 </div>
             </section>
@@ -253,8 +264,18 @@
                     <h3 class="h3 h3--gray">Featured work</h3>
                     
                     <p class="text text--gray">
+                        <a target="_blank" href="http://www.orlandosentinel.com/features/os-scripps-national-spelling-bee-winning-words-quiz-htmlstory.html" class="text-link text-link--gray text-link--bold text-link--big">Scripps National Spelling Bee winning words</a>
+                        It's difficult.
+                    </p>
+                    
+                    <p class="text text--gray">
                         <a target="_blank" href="http://interactive.orlandosentinel.com/quiz/how-central-florida-are-you/" class="text-link text-link--gray text-link--bold text-link--big">How Central Florida are you?</a>
                         The video results are my favorite part.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://interactive.orlandosentinel.com/quiz/nbc-summer-olympics-icons/index.html" class="text-link text-link--gray text-link--bold text-link--big">Guess the Olympic sport by its NBC symbol</a>
+                        That diving icon though.
                     </p>
                     
                     <p class="text text--gray">
@@ -269,6 +290,7 @@
                     <ul class="list">
                         <li><a target="_blank" href="http://interactive.orlandosentinel.com/christmas-songs-quiz/" class="text-link text-link--gray text-link--light text-link--small">Christmas Songs</a></li>.
                         <li><a target="_blank" href="http://www.orlandosentinel.com/entertainment/star-wars/os-star-wars-quiz-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">Star Wars</a></li>
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/quiz/epcot-flower-festival/index.html" class="text-link text-link--gray text-link--light text-link--small">Disney topiaries</a></li>
                     </ul>
                 </div>
             </section>
@@ -282,6 +304,11 @@
                     <p class="text text--gray">
                         <a target="_blank" href="http://interactive.orlandosentinel.com/corporate5K/" class="text-link text-link--gray text-link--bold text-link--big">Corporate 5K times</a>.
                         This was my first true stab at <a target="_blank" href="http://d3js.org/" class="text-link text-link--gray text-link--light text-link--small">d3</a>.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://www.orlandosentinel.com/features/education/os-school-vaccination-rates-central-florida-orlando-htmlstory.html" class="text-link text-link--gray text-link--bold text-link--big">Orlando Magic draft history</a>.
+                        <a target="_blank" href="http://d3js.org/" class="text-link text-link--gray text-link--light text-link--small">d3</a> for the win!
                     </p>
                     
                     <p class="text text--gray">
@@ -314,6 +341,23 @@
                     <h3 class="h3 h3--gray">Featured work</h3>
                     
                     <p class="text text--gray">
+                        <a target="_blank" href="http://www.orlandosentinel.com/news/pulse-orlando-nightclub-shooting/victims/" class="text-link text-link--gray text-link--bold text-link--big">Pulse shooting victims landing page</a>.
+                        It's simple, but it ended up being one of the most viewed pieces of the Sentinel's pulse coverage.
+                        The key was getting it done quick, which we did.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://www.orlandosentinel.com/news/pulse-orlando-nightclub-shooting/os-orlando-pulse-nightclub-shooting-timeline-htmlstory.html" class="text-link text-link--gray text-link--bold text-link--big">Pulse shooting timeline</a>.
+                        The goal was to make sense of what happened that deadly night.
+                    </p>
+                    
+                    <p class="text text--gray">
+                        <a target="_blank" href="http://www.orlandosentinel.com/news/pulse-orlando-nightclub-shooting/os-orlando-pulse-nightclub-shooting-timeline-htmlstory.html" class="text-link text-link--gray text-link--bold text-link--big">Orlando City goal tracker</a>.
+                        Orlando loves soccer, so here's a way for fans to relive the best moments.
+                        It uses <a target="_blank" href="https://d3js.org/" class="text-link text-link--gray text-link--light text-link--small">d3</a>, <a target="_blank" href="https://facebook.github.io/react/" class="text-link text-link--gray text-link--light text-link--small">React</a> and <a target="_blank" href="https://github.com/cubiq/iscroll" class="text-link text-link--gray text-link--light text-link--small">iScroll</a>.
+                    </p>
+                    
+                    <p class="text text--gray">
                         <a target="_blank" href="http://traffic.orlandosentinel.com/I4/reports/" class="text-link text-link--gray text-link--bold text-link--big">I-4 Misery Index</a>.
                         A massive overhaul of Interstate 4 is underway in Central Florida, meaning gridlock is becoming the norm.
                         Using <a target="_blank" href="https://angularjs.org/" class="text-link text-link--gray text-link--light text-link--small">Angular</a>, I built a tool that gives people a real-time look at traffic conditions in the region.
@@ -325,17 +369,13 @@
                         <a target="_blank" href="http://interactive.orlandosentinel.com/soul-of-orlando/perspectives/" class="text-link text-link--gray text-link--bold text-link--big">Perspectives on Orlando's soul</a>.
                         The <a target="_blank" href="https://developers.google.com/youtube/iframe_api_reference?hl=en" class="text-link text-link--gray text-link--light text-link--small">YouTube IFrame Player API</a> and <a target="_blank" href="http://kenwheeler.github.io/slick/" class="text-link text-link--gray text-link--light text-link--small">Slick carousel</a> made this video presentation possible.
                     </p>
-                    
-                    <p class="text text--gray">
-                        <a target="_blank" href="http://interactive.orlandosentinel.com/soul-of-orlando/neighbors-tour/" class="text-link text-link--gray text-link--bold text-link--big">A look at Orlando's neighbors</a>.
-                        Thank goodness for CSS transforms and image preloading.
-                    </p>
                 </div>
                 
                 <div class="block block--third-last block--padded">
                     <h3 class="h3 h3--gray">Others</h3>
                     
                     <ul class="list">
+                        <li><a target="_blank" href="http://interactive.orlandosentinel.com/soul-of-orlando/neighbors-tour/" class="text-link text-link--gray text-link--light text-link--small">A look at Orlando's neighbors</a></li>
                         <li><a target="_blank" href="http://www.orlandosentinel.com/sports/highschool/football/os-top-central-florida-high-school-football-plays-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">Top high school football plays</a></li>
                         <li><a target="_blank" href="http://www.orlandosentinel.com/entertainment/restaurants/os-best-orlando-restaurants-2014-htmlstory.html" class="text-link text-link--gray text-link--light text-link--small">Best restaurants contest results</a></li>
                     </ul>
